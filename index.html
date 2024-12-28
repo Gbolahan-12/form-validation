@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  
+
+  <!-- 
+
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+  General Enquiry
+  Support Request
+  Please select a query type
+
+  Message
+  This field is required
+
+  I consent to being contacted by the team
+  To submit this form, please consent to being contacted
+
+       
+  Message Sent!
+  Thanks for completing the form. We'll be in t
+  ouch soon! -->
+
+  <div class="alert-message">
+   <div class="text-cont">
+    <span><ion-icon name="checkmark-circle-outline"></ion-icon></span>
+    <h5>Message sent!</h5>
+    <div class="alert-cont">
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+   </div>
+  </div>
+  <div class="container">
+
+    <div class="form-cont">
+      <h2>Contact Us</h2>
+      <form class="form">
+        <div class="name">
+          <div class="first-name">
+            <label for="first-name">First Name  *</label>
+            <input type="text" class="firstname">
+              <p class="error-message" id="firstnameError"></p>
+          </div>
+          <div class="last-name">
+            <label for="last-name">Last Name *</label>
+            <input class="lastname" type="text">
+              <p class="error-message" id="lastnameError"></p>
+          </div>
+        </div>
+        <div class="email-cont">
+          <label for="email">Email Address *</label>
+          <input class="email" type="text">
+            <p class="error-message" id="emailError"></p>
+        </div>
+        <!-- <p>Query type</p> -->
+        <div class="query" >
+          <div class="general-quiry">
+            <input type="radio" name="choose" id="label-1" class="select-gen" onclick="Setbackground(), SetRequestcoloroposite()">
+            <label for="label-1" class="test">General Equiry</label>
+          </div>
+          <div class="support-request">
+            <input type="radio" name="choose" id="label-2" class="select-sup" onclick="SetRequestcolor(), Setbackgroundoposite()">
+            <label for="label-2">Support Request</label>
+          </div>
+        </div>
+        <div class="query-error">
+          <p class="error-message" id="optionError"></p>
+        </div>
+        <div class="message">
+          <label for="message">Message *</label>
+          <input type="text" class="messages" id="message" >
+          <p class="error-message" id="messageError"></p>
+        </div>
+        <div class="agree-sms">
+          <input type="checkbox">
+          <label for="check">I consent to being contacted by the team *</label>
+        </div>
+        <div class="confirmErrorMes">
+          <p class="error-message" id="confirmErrorSms"></p>
+        </div>
+        <div class="submit-btn">
+          <button class="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Gbolahan</a>.
+  </div>
+
+  <script src="app.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
